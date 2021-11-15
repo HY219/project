@@ -8,13 +8,32 @@
 	<div id="map" style="width:500px;height:400px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6c747324e8893930edfe21dff937c3c2"></script>
 	<script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+			level: 3 // 지도의 확대 레벨
+		};  
 
-		var map = new kakao.maps.Map(container, options);
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+		// 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+		var linePath = [
+			new kakao.maps.LatLng(33.45473804245402, 126.56430338141732),
+			new kakao.maps.LatLng(33.4552699396987, 126.56428996525601),
+			new kakao.maps.LatLng(33.45527606952606, 126.56603778470715) 
+		];
+
+		// 지도에 표시할 선을 생성합니다
+		var polyline = new kakao.maps.Polyline({
+			path: linePath, // 선을 구성하는 좌표배열 입니다
+			strokeWeight: 3, // 선의 두께 입니다
+			strokeColor: '#FFAE00', // 선의 색깔입니다
+			strokeOpacity: 0.3, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+			strokeStyle: 'solid' // 선의 스타일입니다
+		});
+
+		// 지도에 선을 표시합니다 
+		polyline.setMap(map); 
 	</script>
 </body>
 </html>
