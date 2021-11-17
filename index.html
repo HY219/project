@@ -8,16 +8,16 @@
 	</style>
 </head>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
+	<div id="staticMap" style="width:500px;height:400px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6c747324e8893930edfe21dff937c3c2"></script>
 	<script>
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-		mapOption = { 
+		var staticMapContainer = document.getElementById('staticMap'), // 지도를 표시할 div 
+		staticMapOption = { 
 			center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
 			level: 3 // 지도의 확대 레벨
 		};  
 
-		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지도를 생성합니다
 
 			// 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
 			var linePath = [
