@@ -82,38 +82,57 @@
 			polyline.setMap(map); 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+			//A노선 : 반시계 방향 (정문-> 약학대학(구 제2도서관)-> 해양대1호관 -> 본관-> 학생회관-> 인문대서쪽(학생생활관5호관 앞) -> 학생생활관-> 인문대동쪽-> 중앙도서관-> 의전원-> 공대4호관-> 해양대4호관-> 교양강의동-> 정문)
+			//B노선 : 시계 방향(정문 -> 약학대학(구 제2도서관)-> 해양대1호관-> 교양강의동 -> 해양대4호관-> 공대4호관-> 의전원-> 중앙도서관-> 인문대동쪽-> 학생생활관-> 인문대서쪽(학생생활관5호관 앞)-> 학생회관-> 본관-> 정문)
 
-			//A노선 : 반시계 방향 (정문-> 제2도서관-> 해양대1호관 -> 본관-> 학생회관-> 인문대서쪽 -> 학생생활관-> 인문대동쪽-> 중앙도서관-> 의전원-> 공대4호관-> 교양강의동-> 정문)
-			//B노선 : 시계 방향(정문 ->교양강의동 ->공대4 -> 도서관 -> 긱사 -> 본관 ->정문)
-
-			// 버스정류장_마커가 표시될 위치입니다 
+			// 버스정류장A_마커가 표시될 위치입니다 
 			var markerPosition1_A  = new kakao.maps.LatLng(33.45965343928493, 126.56158159312466);	//정문 버스정류장
-			var markerPosition2_A  = new kakao.maps.LatLng(33.45745626512422, 126.56107903997248);	//약학대학(전 제2도서관) 버스정류장
+			var markerPosition2_A  = new kakao.maps.LatLng(33.45745626512422, 126.56107903997248);	//약학대학(구 제2도서관) 버스정류장
 			var markerPosition3_A  = new kakao.maps.LatLng(33.45728328003912, 126.563155867228);	//해양대1호관 버스정류장
 			var markerPosition4_A  = new kakao.maps.LatLng(33.45628077709361, 126.56266611283844);	//본관 버스정류장
-			var markerPosition5_A  = new kakao.maps.LatLng(33.45446469315322, 126.56029817615423);	//학생회관 버스정류장
-			var markerPosition6_A  = new kakao.maps.LatLng(33.45272383703195, 126.55754812966164);	//인문대서쪽 버스정류장
+			var markerPosition5_A  = new kakao.maps.LatLng(33.45434178682822, 126.55996267514934);	//학생회관 버스정류장
+			var markerPosition6_A  = new kakao.maps.LatLng(33.45272383703195, 126.55754812966164);	//인문대서쪽(학생생활관5호관 앞) 버스정류장
 			var markerPosition7_A  = new kakao.maps.LatLng(33.45155810713337, 126.55806493751545);	//학생생활관 버스정류장
-			var markerPosition8_A  = new kakao.maps.LatLng(33.45263058132319, 126.55921035429107);	//인문대동쪽 버스정류장
+			var markerPosition8_A  = new kakao.maps.LatLng(33.452452661749206, 126.55925158811148);	//인문대동쪽 버스정류장
 			var markerPosition9_A  = new kakao.maps.LatLng(33.4530880030851, 126.56107684773114);	//중앙도서관 버스정류장
 			var markerPosition10_A  = new kakao.maps.LatLng(33.45311388505789, 126.56394043104082);	//의전원 버스정류장
 			var markerPosition11_A  = new kakao.maps.LatLng(33.454652543068676, 126.56434683270916);	//공대4호관 버스정류장
-			var markerPosition11_A  = new kakao.maps.LatLng(33.45528399799785, 126.56637118128162);	//해양대4호관 버스정류장			
-			var markerPosition12_A = new kakao.maps.LatLng(33.45564861806433, 126.56365077556825);	//교양동 버스정류장
+			var markerPosition12_A  = new kakao.maps.LatLng(33.45528399799785, 126.56637118128162);	//해양대4호관 버스정류장			
+			var markerPosition13_A = new kakao.maps.LatLng(33.45564861806433, 126.56365077556825);	//교양동 버스정류장
+
+			// 버스정류장B_마커가 표시될 위치입니다 
+			var markerPosition1_B  = new kakao.maps.LatLng(33.45965343928493, 126.56158159312466);	//정문 버스정류장
+			var markerPosition2_B  = new kakao.maps.LatLng(33.45722634214247, 126.56107482036796);	//약학대학(전 제2도서관) 버스정류장
+			var markerPosition3_B  = new kakao.maps.LatLng(33.456936132157466, 126.5631468519074);	//해양대1호관 버스정류장
+			var markerPosition4_B  = new kakao.maps.LatLng(33.45557121664361, 126.56343335352804);	//교양강의동 버스정류장
+			var markerPosition5_A  = new kakao.maps.LatLng(33.45537053232618, 126.56662351685743);	//해양대4호관 버스정류장
+			var markerPosition6_B  = new kakao.maps.LatLng(33.45443121065074, 126.56422155774139);	//공대4호관 버스정류장
+			var markerPosition7_B  = new kakao.maps.LatLng(33.45318930887334, 126.56359586978772);	//의전원 버스정류장
+			var markerPosition8_B  = new kakao.maps.LatLng(33.45318761519736, 126.56120003690766);	//중앙도서관 버스정류장
+			var markerPosition9_B  = new kakao.maps.LatLng(33.452695592480445, 126.5591105353544);	//인문대동쪽 버스정류장
+			var markerPosition10_B  = new kakao.maps.LatLng(33.451637810173615, 126.55829308862937);	//학생생활관 버스정류장
+			var markerPosition11_B  = new kakao.maps.LatLng(33.452598162043245, 126.55770203611944);	//인문대서쪽(학생생활관5호관 앞) 버스정류장
+			var markerPosition12_B  = new kakao.maps.LatLng(33.45439750337384, 126.56041951902566);	//학생회관 버스정류장
+			var markerPosition13_B  = new kakao.maps.LatLng(33.4561113354243, 126.56191672535435);	//본관 버스정류장
 
 
 
 			//마커 이미지
 			var imageSrc_A = 'https://cdn-icons-png.flaticon.com/512/3448/3448339.png', // A노선 마커(빨강) 이미지의 주소입니다  
-			/*var imageSrc_B = 'https://cdn-icons-png.flaticon.com/512/3448/3448314.png', // B노선 마커(파랑) 이미지의 주소입니다   */
+			var imageSrc_B = 'https://cdn-icons-png.flaticon.com/512/3448/3448314.png', // B노선 마커(파랑) 이미지의 주소입니다
 			imageSize = new kakao.maps.Size(30, 30), // 마커이미지의 크기입니다
     		imageOption = {offset: new kakao.maps.Point(16, 30)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 			
 			// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
 			var markerImage_A = new kakao.maps.MarkerImage(imageSrc_A, imageSize, imageOption);	//A노선
-			/*var markerImage_B = new kakao.maps.MarkerImage(imageSrc_B, imageSize, imageOption);	//B노선 */
+			var markerImage_B = new kakao.maps.MarkerImage(imageSrc_B, imageSize, imageOption);	//B노선
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 			// 마커를 생성합니다
 			// A노선 마커이미지 설정
@@ -188,15 +207,95 @@
 				image: markerImage_A 
 			});
 			marker12_A.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker13_A = new kakao.maps.Marker({
+				position: markerPosition13_A,
+				image: markerImage_A 
+			});
+			marker13_A.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
 				
-			/*
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 			// B노선 마커이미지 설정
+			var marker1_B = new kakao.maps.Marker({
+				position: markerPosition1_B,
+				image: markerImage_B
+			});
+			marker1_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker2_B = new kakao.maps.Marker({
+				position: markerPosition2_B,
+				image: markerImage_B
+			});
+			marker2_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker3_B = new kakao.maps.Marker({
+				position: markerPosition3_B,
+				image: markerImage_B 
+			});
+			marker3_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker4_B = new kakao.maps.Marker({
+				position: markerPosition4_B,
+				image: markerImage_B
+			});
+			marker4_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker5_B = new kakao.maps.Marker({
+				position: markerPosition5_B,
+				image: markerImage_B 
+			});
+			marker5_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker6_B = new kakao.maps.Marker({
+				position: markerPosition6_B,
+				image: markerImage_B 
+			});
+			marker6_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker7_B = new kakao.maps.Marker({
+				position: markerPosition7_B,
+				image: markerImage_B 
+			});
+			marker7_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker8_B = new kakao.maps.Marker({
+				position: markerPosition8_B,
+				image: markerImage_B 
+			});
+			marker8_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
 			var marker9_B = new kakao.maps.Marker({
 				position: markerPosition9_B,
 				image: markerImage_B 
 			});
-			marker9_A.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
-			*/
+			marker9_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker10_B = new kakao.maps.Marker({
+				position: markerPosition10_B,
+				image: markerImage_B 
+			});
+			marker10_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker11_B = new kakao.maps.Marker({
+				position: markerPosition11_B,
+				image: markerImage_B
+			});
+			marker11_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker12_B = new kakao.maps.Marker({
+				position: markerPosition12_B,
+				image: markerImage_B
+			});
+			marker12_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
+
+			var marker13_B = new kakao.maps.Marker({
+				position: markerPosition13_B,
+				image: markerImage_B
+			});
+			marker13_B.setMap(map);	// 마커가 지도 위에 표시되도록 설정합니다
 
 			
 
