@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Kakao 지도 시작하기</title>
+	<style>
+		
+	</style>
 </head>
 <body>
 	<div id="map" style="width:500px;height:400px;"></div>
@@ -16,48 +19,48 @@
 
 		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-		// 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
-		var linePath = [
-		new kakao.maps.LatLng(33.459811596777094, 126.5616883626409),// 정문
-            new kakao.maps.LatLng(33.4593320832366, 126.56121748964206),// 정문 입구
-            new kakao.maps.LatLng(33.457574108740026 , 126.56125861391408),//약학대학(동)
-            new kakao.maps.LatLng(33.4574885153456 , 126.56127517942882),//약학대학 코너
-            new kakao.maps.LatLng(33.45750449977659 , 126.56324887523927),//해양대 가기전 코너
-            new kakao.maps.LatLng(33.45567909431768 , 126.56334407550594),//교양강의동 가기전 코너
-			new kakao.maps.LatLng(33.45565326793219, 126.56369108745169),	//교양강의동
-			new kakao.maps.LatLng(33.455622147683954, 126.56381493780444),	//코너
-			new kakao.maps.LatLng(33.45558201146423, 126.56393883319929),	//코너
-			
-			new kakao.maps.LatLng(33.455308899480684, 126.56447262247288),	//코너
-			new kakao.maps.LatLng(33.45533364159899, 126.56638706818944),	//코너
-			new kakao.maps.LatLng(33.455297427727004, 126.56634422442423),	//해대4호관
-			new kakao.maps.LatLng(33.455258783278204, 126.56432228904856),	//코너
-			new kakao.maps.LatLng(33.454478874597775, 126.56431543346217)	//공대4호관
-			
-			
-			
-			
-			//new kakao.maps.LatLng(33.45532191311008, 126.56432735133325),	//코너
-			//new kakao.maps.LatLng(33.45537102776579, 126.56419265555998),	//코너
-			
-			
-			
-			
-			
+		function LineSee(){
+			// 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+			var linePath = [
+				new kakao.maps.LatLng(33.459811596777094, 126.5616883626409),// 정문
+				new kakao.maps.LatLng(33.4593320832366, 126.56121748964206),// 정문 입구
+				new kakao.maps.LatLng(33.457574108740026 , 126.56125861391408),//약학대학(동)
+				new kakao.maps.LatLng(33.4574885153456 , 126.56127517942882),//약학대학 코너
+				new kakao.maps.LatLng(33.45750449977659 , 126.56324887523927),//해양대 가기전 코너
+				new kakao.maps.LatLng(33.45567909431768 , 126.56334407550594),//교양강의동 가기전 코너
+				new kakao.maps.LatLng(33.45565326793219, 126.56369108745169),	//교양강의동
+				new kakao.maps.LatLng(33.455622147683954, 126.56381493780444),	//코너
+				new kakao.maps.LatLng(33.45565326793219, 126.56369108745169),	//교양강의동
+				new kakao.maps.LatLng(33.45558201146423, 126.56393883319929),	//코너
+				new kakao.maps.LatLng(33.45537102776579, 126.56419265555998),	//코너
+				new kakao.maps.LatLng(33.45532191311008, 126.56432735133325),	//코너
 
-		];
+				new kakao.maps.LatLng(33.455308899480684, 126.56447262247288),	//코너
+				new kakao.maps.LatLng(33.45533364159899, 126.56638706818944),	//코너
+				new kakao.maps.LatLng(33.455297427727004, 126.56634422442423),	//해대4호관
+				new kakao.maps.LatLng(33.455258783278204, 126.56432228904856),	//코너
+				new kakao.maps.LatLng(33.454478874597775, 126.56431543346217)	//공대4호관
 
-		// 지도에 표시할 선을 생성합니다
-		var polyline = new kakao.maps.Polyline({
-			path: linePath, // 선을 구성하는 좌표배열 입니다
-			strokeWeight: 3, // 선의 두께 입니다
-			strokeColor: '#FFAE00', // 선의 색깔입니다
-			strokeOpacity: 0.3, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-			strokeStyle: 'solid' // 선의 스타일입니다
-		});
 
-		// 지도에 선을 표시합니다 
-		polyline.setMap(map); 
+
+
+				
+				
+			];
+
+			// 지도에 표시할 선을 생성합니다
+			var polyline = new kakao.maps.Polyline({
+				path: linePath, // 선을 구성하는 좌표배열 입니다
+				strokeWeight: 3, // 선의 두께 입니다
+				strokeColor: '#FFAE00', // 선의 색깔입니다
+				strokeOpacity: 0.3, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+				strokeStyle: 'solid' // 선의 스타일입니다
+			});
+
+
+			// 지도에 선을 표시합니다 
+			polyline.setMap(map); 
+		}
 	</script>
 </body>
 </html>
