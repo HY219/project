@@ -103,7 +103,7 @@
 			// 버스정류장B_마커가 표시될 위치입니다 
 			var markerPosition1_B  = new kakao.maps.LatLng(33.459728010123584, 126.561635000522);	//정문 버스정류장
 			var markerPosition2_B  = new kakao.maps.LatLng(33.45722634214247, 126.56107482036796);	//약학대학(전 제2도서관) 버스정류장
-			var markerPosition3_B  = new kakao.maps.LatLng(33.45719288472253, 126.56308909407078);	//해양대1호관 버스정류장
+			var markerPosition3_B  = new kakao.maps.LatLng(33.457084808306355, 126.56312190480722);	//해양대1호관 버스정류장
 			var markerPosition4_B  = new kakao.maps.LatLng(33.45557121664361, 126.56343335352804);	//교양강의동 버스정류장
 			var markerPosition5_B  = new kakao.maps.LatLng(33.45537053232618, 126.56662351685743);	//해양대4호관 버스정류장
 			var markerPosition6_B  = new kakao.maps.LatLng(33.454525895964956, 126.56422646207002);	//공대4호관 버스정류장
@@ -299,11 +299,11 @@
 			// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 			// marker.setMap(null); 
 
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 		//A노선
 		// 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
-		var iwContent1_A = '<div style="padding:5px;">버스시간표</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		var iwContent1_A = '<div style="padding:5px;">정문 A노선 버스시간표</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 		// 인포윈도우를 생성합니다
 		var infowindow1_A = new kakao.maps.InfoWindow({
 			content : iwContent1_A
@@ -319,17 +319,137 @@
 				infowindow1_A.close();
 			});
 
-		var iwContent2_A = '<div style="padding:5px;">버스시간표</div>';
+		var iwContent2_A = '<div style="padding:5px;">약학대학 A노선 버스시간표</div>';
 		var infowindow2_A = new kakao.maps.InfoWindow({
 			content : iwContent2_A
 		});
-			kakao.maps.event.addListener(marker2_A, 'mouseover', function() {
-				infowindow2_A.open(map, marker2_A);
-			});
-			kakao.maps.event.addListener(marker2_A, 'mouseout', function() {
-				infowindow2_A.close();
-			});
+		kakao.maps.event.addListener(marker2_A, 'mouseover', function() {
+			infowindow2_A.open(map, marker2_A);
+		});
+		kakao.maps.event.addListener(marker2_A, 'mouseout', function() {
+			infowindow2_A.close();
+		});
+
+		var iwContent3_A = '<div style="padding:5px;">해양대1호관 A노선 버스시간표</div>';
+		var infowindow3_A = new kakao.maps.InfoWindow({
+			content : iwContent3_A
+		});
+		kakao.maps.event.addListener(marker3_A, 'mouseover', function() {
+			infowindow3_A.open(map, marker3_A);
+		});
+		kakao.maps.event.addListener(marker3_A, 'mouseout', function() {
+			infowindow3_A.close();
+		});
 			
+		var iwContent4_A = '<div style="padding:5px;">본관 A노선 버스시간표</div>';
+		var infowindow4_A = new kakao.maps.InfoWindow({
+			content : iwContent4_A
+		});
+		kakao.maps.event.addListener(marker4_A, 'mouseover', function() {
+			infowindow4_A.open(map, marker4_A);
+		});
+		kakao.maps.event.addListener(marker4_A, 'mouseout', function() {
+			infowindow4_A.close();
+		});
+
+		var iwContent5_A = '<div style="padding:5px;">학생회관 A노선 버스시간표</div>';
+		var infowindow5_A = new kakao.maps.InfoWindow({
+			content : iwContent5_A
+		});
+		kakao.maps.event.addListener(marker5_A, 'mouseover', function() {
+			infowindow5_A.open(map, marker5_A);
+		});
+		kakao.maps.event.addListener(marker5_A, 'mouseout', function() {
+			infowindow5_A.close();
+		});
+
+		var iwContent6_A = '<div style="padding:5px;">인문대서쪽 A노선 버스시간표</div>';
+		var infowindow6_A = new kakao.maps.InfoWindow({
+			content : iwContent6_A
+		});
+		kakao.maps.event.addListener(marker6_A, 'mouseover', function() {
+			infowindow6_A.open(map, marker6_A);
+		});
+		kakao.maps.event.addListener(marker6_A, 'mouseout', function() {
+			infowindow6_A.close();
+		});
+
+		var iwContent7_A = '<div style="padding:5px;">학생생활관 A노선 버스시간표</div>';
+		var infowindow7_A = new kakao.maps.InfoWindow({
+			content : iwContent7_A
+		});
+		kakao.maps.event.addListener(marker7_A, 'mouseover', function() {
+			infowindow7_A.open(map, marker7_A);
+		});
+		kakao.maps.event.addListener(marker7_A, 'mouseout', function() {
+			infowindow7_A.close();
+		});
+
+		var iwContent8_A = '<div style="padding:5px;">인문대동쪽(학생생활관5호관) A노선 버스시간표</div>';
+		var infowindow8_A = new kakao.maps.InfoWindow({
+			content : iwContent8_A
+		});
+		kakao.maps.event.addListener(marker8_A, 'mouseover', function() {
+			infowindow8_A.open(map, marker8_A);
+		});
+		kakao.maps.event.addListener(marker8_A, 'mouseout', function() {
+			infowindow8_A.close();
+		});
+
+		var iwContent9_A = '<div style="padding:5px;">중앙도서관 A노선 버스시간표</div>';
+		var infowindow9_A = new kakao.maps.InfoWindow({
+			content : iwContent9_A
+		});
+		kakao.maps.event.addListener(marker9_A, 'mouseover', function() {
+			infowindow9_A.open(map, marker9_A);
+		});
+		kakao.maps.event.addListener(marker9_A, 'mouseout', function() {
+			infowindow9_A.close();
+		});
+
+		var iwContent10_A = '<div style="padding:5px;">의전원 A노선 버스시간표</div>';
+		var infowindow10_A = new kakao.maps.InfoWindow({
+			content : iwContent10_A
+		});
+		kakao.maps.event.addListener(marker10_A, 'mouseover', function() {
+			infowindow10_A.open(map, marker10_A);
+		});
+		kakao.maps.event.addListener(marker10_A, 'mouseout', function() {
+			infowindow10_A.close();
+		});
+
+		var iwContent11_A = '<div style="padding:5px;">공대4호관 A노선 버스시간표</div>';
+		var infowindow11_A = new kakao.maps.InfoWindow({
+			content : iwContent11_A
+		});
+		kakao.maps.event.addListener(marker11_A, 'mouseover', function() {
+			infowindow11_A.open(map, marker11_A);
+		});
+		kakao.maps.event.addListener(marker11_A, 'mouseout', function() {
+			infowindow11_A.close();
+		});
+
+		var iwContent12_A = '<div style="padding:5px;">해양대4호관 A노선 버스시간표</div>';
+		var infowindow12_A = new kakao.maps.InfoWindow({
+			content : iwContent12_A
+		});
+		kakao.maps.event.addListener(marker12_A, 'mouseover', function() {
+			infowindow12_A.open(map, marker12_A);
+		});
+		kakao.maps.event.addListener(marker12_A, 'mouseout', function() {
+			infowindow12_A.close();
+		});
+
+		var iwContent13_A = '<div style="padding:5px;">교양강의동 A노선 버스시간표</div>';
+		var infowindow13_A = new kakao.maps.InfoWindow({
+			content : iwContent13_A
+		});
+		kakao.maps.event.addListener(marker13_A, 'mouseover', function() {
+			infowindow13_A.open(map, marker13_A);
+		});
+		kakao.maps.event.addListener(marker13_A, 'mouseout', function() {
+			infowindow13_A.close();
+		});
 	</script>
 </body>
 </html>
