@@ -301,25 +301,29 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
+		//마커 클릭이벤트//
+
 		//A노선
+		//정문_A
 		// 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
 		var iwContent1_A = '<div style="padding:5px;">정문 A노선 버스시간표</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 		// 인포윈도우를 생성합니다
 		var infowindow1_A = new kakao.maps.InfoWindow({
 			content : iwContent1_A
 		});
-			// 마커에 마우스오버 이벤트를 등록합니다
-			kakao.maps.event.addListener(marker1_A, 'mouseover', function() {
-				// 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
-				infowindow1_A.open(map, marker1_A);
-			});
-			// 마커에 마우스아웃 이벤트를 등록합니다
-			kakao.maps.event.addListener(marker1_A, 'mouseout', function() {
-				// 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
-				infowindow1_A.close();
-			});
+		// 마커에 마우스오버 이벤트를 등록합니다
+		kakao.maps.event.addListener(marker1_A, 'mouseover', function() {
+			// 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+			infowindow1_A.open(map, marker1_A);
+		});
+		// 마커에 마우스아웃 이벤트를 등록합니다
+		kakao.maps.event.addListener(marker1_A, 'mouseout', function() {
+			// 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+			infowindow1_A.close();
+		});
 
-		var iwContent2_A = '<div style="padding:5px;">약학대학 A노선 버스시간표</div>';
+		//약학대학(구 제2도서관)_A
+		var iwContent2_A = '<div style="padding:5px;">약학대학(구 제2도서관) A노선 버스시간표</div>';
 		var infowindow2_A = new kakao.maps.InfoWindow({
 			content : iwContent2_A
 		});
@@ -330,6 +334,7 @@
 			infowindow2_A.close();
 		});
 
+		//해양대1호관_A
 		var iwContent3_A = '<div style="padding:5px;">해양대1호관 A노선 버스시간표</div>';
 		var infowindow3_A = new kakao.maps.InfoWindow({
 			content : iwContent3_A
@@ -340,7 +345,8 @@
 		kakao.maps.event.addListener(marker3_A, 'mouseout', function() {
 			infowindow3_A.close();
 		});
-			
+		
+		//본관_A
 		var iwContent4_A = '<div style="padding:5px;">본관 A노선 버스시간표</div>';
 		var infowindow4_A = new kakao.maps.InfoWindow({
 			content : iwContent4_A
@@ -352,6 +358,7 @@
 			infowindow4_A.close();
 		});
 
+		//학생회관_A
 		var iwContent5_A = '<div style="padding:5px;">학생회관 A노선 버스시간표</div>';
 		var infowindow5_A = new kakao.maps.InfoWindow({
 			content : iwContent5_A
@@ -363,7 +370,8 @@
 			infowindow5_A.close();
 		});
 
-		var iwContent6_A = '<div style="padding:5px;">인문대서쪽 A노선 버스시간표</div>';
+		//인문대서쪽_A
+		var iwContent6_A = '<div style="padding:5px;">인문대서쪽(학생생활관5호관) A노선 버스시간표</div>';
 		var infowindow6_A = new kakao.maps.InfoWindow({
 			content : iwContent6_A
 		});
@@ -374,6 +382,7 @@
 			infowindow6_A.close();
 		});
 
+		//학생생활관_A
 		var iwContent7_A = '<div style="padding:5px;">학생생활관 A노선 버스시간표</div>';
 		var infowindow7_A = new kakao.maps.InfoWindow({
 			content : iwContent7_A
@@ -385,7 +394,8 @@
 			infowindow7_A.close();
 		});
 
-		var iwContent8_A = '<div style="padding:5px;">인문대동쪽(학생생활관5호관) A노선 버스시간표</div>';
+		//인문대동쪽(학생생활관5호관)_A
+		var iwContent8_A = '<div style="padding:5px;">인문대동쪽 A노선 버스시간표</div>';
 		var infowindow8_A = new kakao.maps.InfoWindow({
 			content : iwContent8_A
 		});
@@ -396,6 +406,7 @@
 			infowindow8_A.close();
 		});
 
+		//중앙도서관_A
 		var iwContent9_A = '<div style="padding:5px;">중앙도서관 A노선 버스시간표</div>';
 		var infowindow9_A = new kakao.maps.InfoWindow({
 			content : iwContent9_A
@@ -407,6 +418,7 @@
 			infowindow9_A.close();
 		});
 
+		//의전원_A
 		var iwContent10_A = '<div style="padding:5px;">의전원 A노선 버스시간표</div>';
 		var infowindow10_A = new kakao.maps.InfoWindow({
 			content : iwContent10_A
@@ -418,6 +430,7 @@
 			infowindow10_A.close();
 		});
 
+		//공대4호관_A
 		var iwContent11_A = '<div style="padding:5px;">공대4호관 A노선 버스시간표</div>';
 		var infowindow11_A = new kakao.maps.InfoWindow({
 			content : iwContent11_A
@@ -429,6 +442,7 @@
 			infowindow11_A.close();
 		});
 
+		//해양대4호관_A
 		var iwContent12_A = '<div style="padding:5px;">해양대4호관 A노선 버스시간표</div>';
 		var infowindow12_A = new kakao.maps.InfoWindow({
 			content : iwContent12_A
@@ -440,6 +454,7 @@
 			infowindow12_A.close();
 		});
 
+		//교양강의동_A
 		var iwContent13_A = '<div style="padding:5px;">교양강의동 A노선 버스시간표</div>';
 		var infowindow13_A = new kakao.maps.InfoWindow({
 			content : iwContent13_A
@@ -449,6 +464,172 @@
 		});
 		kakao.maps.event.addListener(marker13_A, 'mouseout', function() {
 			infowindow13_A.close();
+		});
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		//B노선
+		//정문_B
+		// 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
+		var iwContent1_B = '<div style="padding:5px;">정문 B노선 버스시간표</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		// 인포윈도우를 생성합니다
+		var infowindow1_B = new kakao.maps.InfoWindow({
+			content : iwContent1_B
+		});
+		// 마커에 마우스오버 이벤트를 등록합니다
+		kakao.maps.event.addListener(marker1_B, 'mouseover', function() {
+			// 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+			infowindow1_B.open(map, marker1_B);
+		});
+		// 마커에 마우스아웃 이벤트를 등록합니다
+		kakao.maps.event.addListener(marker1_B, 'mouseout', function() {
+			// 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+			infowindow1_B.close();
+		});
+
+		//약학대학(구 제2도서관)_B
+		var iwContent2_B = '<div style="padding:5px;">약학대학(구 제2도서관) B노선 버스시간표</div>';
+		var infowindow2_B = new kakao.maps.InfoWindow({
+			content : iwContent2_B
+		});
+		kakao.maps.event.addListener(marker2_B, 'mouseover', function() {
+			infowindow2_B.open(map, marker2_B);
+		});
+		kakao.maps.event.addListener(marker2_B, 'mouseout', function() {
+			infowindow2_B.close();
+		});
+
+		//해양대1호관_B
+		var iwContent3_B = '<div style="padding:5px;">해양대1호관 B노선 버스시간표</div>';
+		var infowindow3_B = new kakao.maps.InfoWindow({
+			content : iwContent3_B
+		});
+		kakao.maps.event.addListener(marker3_B, 'mouseover', function() {
+			infowindow3_B.open(map, marker3_B);
+		});
+		kakao.maps.event.addListener(marker3_B, 'mouseout', function() {
+			infowindow3_B.close();
+		});
+		
+		//교양강의동_B
+		var iwContent4_B = '<div style="padding:5px;">교양강의동 B노선 버스시간표</div>';
+		var infowindow4_B = new kakao.maps.InfoWindow({
+			content : iwContent4_B
+		});
+		kakao.maps.event.addListener(marker4_B, 'mouseover', function() {
+			infowindow4_B.open(map, marker4_B);
+		});
+		kakao.maps.event.addListener(marker4_B, 'mouseout', function() {
+			infowindow4_B.close();
+		});
+
+		//해양대4호관_B
+		var iwContent5_B = '<div style="padding:5px;">해양대4호관 B노선 버스시간표</div>';
+		var infowindow5_B = new kakao.maps.InfoWindow({
+			content : iwContent5_B
+		});
+		kakao.maps.event.addListener(marker5_B, 'mouseover', function() {
+			infowindow5_B.open(map, marker5_B);
+		});
+		kakao.maps.event.addListener(marker5_B, 'mouseout', function() {
+			infowindow5_B.close();
+		});
+
+		//공대4호관_B
+		var iwContent6_B = '<div style="padding:5px;">공대4호관 B노선 버스시간표</div>';
+		var infowindow6_B = new kakao.maps.InfoWindow({
+			content : iwContent6_B
+		});
+		kakao.maps.event.addListener(marker6_B, 'mouseover', function() {
+			infowindow6_B.open(map, marker6_B);
+		});
+		kakao.maps.event.addListener(marker6_B, 'mouseout', function() {
+			infowindow6_B.close();
+		});
+
+		//의전원_B
+		var iwContent7_B = '<div style="padding:5px;">의전원 B노선 버스시간표</div>';
+		var infowindow7_B = new kakao.maps.InfoWindow({
+			content : iwContent7_B
+		});
+		kakao.maps.event.addListener(marker7_B, 'mouseover', function() {
+			infowindow7_B.open(map, marker7_B);
+		});
+		kakao.maps.event.addListener(marker7_B, 'mouseout', function() {
+			infowindow7_B.close();
+		});
+
+		//중앙도서관_B
+		var iwContent8_B = '<div style="padding:5px;">중앙도서관 B노선 버스시간표</div>';
+		var infowindow8_B = new kakao.maps.InfoWindow({
+			content : iwContent8_B
+		});
+		kakao.maps.event.addListener(marker8_B, 'mouseover', function() {
+			infowindow8_B.open(map, marker8_B);
+		});
+		kakao.maps.event.addListener(marker8_B, 'mouseout', function() {
+			infowindow8_B.close();
+		});
+
+		//인문대동쪽_B
+		var iwContent9_B = '<div style="padding:5px;">인문대동쪽 B노선 버스시간표</div>';
+		var infowindow9_B = new kakao.maps.InfoWindow({
+			content : iwContent9_B
+		});
+		kakao.maps.event.addListener(marker9_B, 'mouseover', function() {
+			infowindow9_B.open(map, marker9_B);
+		});
+		kakao.maps.event.addListener(marker9_B, 'mouseout', function() {
+			infowindow9_B.close();
+		});
+
+		//학생생활관_B
+		var iwContent10_B = '<div style="padding:5px;">학생생활관 B노선 버스시간표</div>';
+		var infowindow10_B = new kakao.maps.InfoWindow({
+			content : iwContent10_B
+		});
+		kakao.maps.event.addListener(marker10_B, 'mouseover', function() {
+			infowindow10_B.open(map, marker10_B);
+		});
+		kakao.maps.event.addListener(marker10_B, 'mouseout', function() {
+			infowindow10_B.close();
+		});
+
+		//인문대서쪽(학생생활관5호관)_B
+		var iwContent11_B = '<div style="padding:5px;">인문대서쪽(학생생활관5호관) B노선 버스시간표</div>';
+		var infowindow11_B = new kakao.maps.InfoWindow({
+			content : iwContent11_B
+		});
+		kakao.maps.event.addListener(marker11_B, 'mouseover', function() {
+			infowindow11_B.open(map, marker11_B);
+		});
+		kakao.maps.event.addListener(marker11_B, 'mouseout', function() {
+			infowindow11_B.close();
+		});
+
+		//학생회관_B
+		var iwContent12_B = '<div style="padding:5px;">학생회관 B노선 버스시간표</div>';
+		var infowindow12_B = new kakao.maps.InfoWindow({
+			content : iwContent12_B
+		});
+		kakao.maps.event.addListener(marker12_B, 'mouseover', function() {
+			infowindow12_B.open(map, marker12_B);
+		});
+		kakao.maps.event.addListener(marker12_B, 'mouseout', function() {
+			infowindow12_B.close();
+		});
+
+		//본관_B
+		var iwContent13_B = '<div style="padding:5px;">본관 B노선 버스시간표</div>';
+		var infowindow13_B = new kakao.maps.InfoWindow({
+			content : iwContent13_B
+		});
+		kakao.maps.event.addListener(marker13_B, 'mouseover', function() {
+			infowindow13_B.open(map, marker13_B);
+		});
+		kakao.maps.event.addListener(marker13_B, 'mouseout', function() {
+			infowindow13_B.close();
 		});
 	</script>
 </body>
